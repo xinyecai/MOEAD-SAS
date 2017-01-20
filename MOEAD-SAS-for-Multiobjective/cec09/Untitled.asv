@@ -1,0 +1,15 @@
+
+
+disp('----------------------------------------');
+disp('test IGD with constraint on CF1')
+% load the PF* data
+PFStar  = load('pf_data/CF10.dat');
+PFStar  = PFStar';
+
+% randomly generate 1000 points inside the search space
+PF  = open('b.dat');
+PF  = PF';
+str  = sprintf('%.5f = IGD(PFStar, PF, C)', IGD(PFStar, PF, C));
+disp(str);
+
+disp('----------------------------------------');
